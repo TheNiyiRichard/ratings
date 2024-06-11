@@ -1,0 +1,124 @@
+:root {
+    --app-background-dark: #20232a;
+    --star-gold: #daa520;
+    --star-gray: #789;
+    --button-bg: #8a2be2;
+    --button-bg-hover: #8a2be299;
+    --dialog-bg: #ffffff;
+    --dialog-overlay-bg: rgba(0, 0, 0, 0.8);
+    --dialog-text-color: #151313;
+    --button-close-bg: brown;
+    --button-close-bg-hover: #a52a2af2;
+  }
+  
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: var(--app-background-dark);
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow-x: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .app {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  h2 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .not-selected, .selected {
+    cursor: pointer;
+    font-size: 60px;
+    transition: all 0.25s ease-in-out;
+  }
+  
+  .selected {
+    color: var(--star-gold);
+  }
+  
+  .not-selected {
+    color: var(--star-gray);
+  }
+  
+  .open-dialog {
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: all 0.25s ease-in-out;
+  }
+  
+  .open-dialog:hover {
+    background-color: var(--button-bg-hover);
+  }
+  
+  .dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dialog-overlay-bg);
+    z-index: 1000;
+  }
+  
+  .dialog {
+    background-color: var(--dialog-bg);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  .dialog-title {
+    color: var(--dialog-text-color);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  .dialog-content {
+    margin-bottom: 20px;
+  }
+  
+  .dialog-actions button {
+    background-color: var(--button-close-bg);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: all 0.25s ease-in-out;
+  }
+  
+  .dialog-actions button:hover {
+    background-color: var(--button-close-bg-hover);
+  }
+  
